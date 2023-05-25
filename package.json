@@ -5,7 +5,8 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "test": "mocha country/country.test.js"
+    "test": "mocha country/country.test.js",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
