@@ -1,5 +1,15 @@
-export const filter = (name, countries) => {
+export const filterByName = (name, countries) => {
     return countries.filter((country) =>
-    country.name.common.toLowerCase().includes(name.toLowerCase())
+      country.name.common.toLowerCase()
+        .includes(name.toLowerCase())
   );
 }
+
+export const filterByPopulation = (population, countries) => {
+  return countries.filter((country) => {
+    const countryPopulation = country.population;
+    const populationThreshold = population * 1000000;
+
+    return countryPopulation < populationThreshold;
+  });
+};
