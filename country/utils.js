@@ -13,3 +13,7 @@ export const filterByPopulation = (population, countries) => {
     return countryPopulation < populationThreshold;
   });
 };
+
+export const pagination = (limit, countries) => {
+  return countries.slice(0, limit);
+};
