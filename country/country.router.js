@@ -4,8 +4,8 @@ import express from 'express';
 const countryRouter = express.Router();
 
 countryRouter.get('/api/countries', async (req, res) => {
-    const { name, population } = req.query;
-    await getCountries(res, name, population);
+    const { name, population, limit, order } = req.query;
+    await getCountries(res, name, population, limit, order);
   });
   
 

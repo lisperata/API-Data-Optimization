@@ -19,7 +19,7 @@ export const pagination = (limit, countries) => {
 };
 
 export const sort = (order, countries) => {
-  const sortedCountries = [...countries];
+  let sortedCountries = [...countries];
 
   if (order === 'ascend') {
     sortedCountries.sort((a, b) => a.name.common.localeCompare(b.name.common));
