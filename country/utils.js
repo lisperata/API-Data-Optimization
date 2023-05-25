@@ -17,3 +17,15 @@ export const filterByPopulation = (population, countries) => {
 export const pagination = (limit, countries) => {
   return countries.slice(0, limit);
 };
+
+export const sort = (order, countries) => {
+  const sortedCountries = [...countries];
+
+  if (order === 'ascend') {
+    sortedCountries.sort((a, b) => a.name.common.localeCompare(b.name.common));
+  } else if (order === 'descend') {
+    sortedCountries.sort((a, b) => b.name.common.localeCompare(a.name.common));
+  }
+
+  return sortedCountries;
+};
